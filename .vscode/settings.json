@@ -1,0 +1,16 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/headofit/Downloads/javafx-sdk-18/lib/javafx.base.jar",
+        "/Users/headofit/Downloads/javafx-sdk-18/lib/javafx.controls.jar",
+        "/Users/headofit/Downloads/javafx-sdk-18/lib/javafx.web.jar",
+        "/Users/headofit/Downloads/javafx-sdk-18/lib/javafx.swing.jar",
+        "/Users/headofit/Downloads/javafx-sdk-18/lib/javafx.graphics.jar",
+        "/Users/headofit/Downloads/javafx-sdk-18/lib/javafx.media.jar",
+        "/Users/headofit/Downloads/javafx-sdk-18/lib/javafx-swt.jar",
+        "/Users/headofit/Downloads/javafx-sdk-18/lib/javafx.fxml.jar",
+        "/Users/headofit/Downloads/mysql-connector-java-8.0.27.jar"
+    ]
+}
