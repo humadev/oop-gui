@@ -36,6 +36,7 @@ public class Table {
 
             contextMenu.getItems().addAll(edit, delete);
             row.setContextMenu(contextMenu);
+            System.out.println("test");
             return row;
         });
     }
