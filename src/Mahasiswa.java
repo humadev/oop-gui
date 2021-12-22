@@ -1,4 +1,5 @@
-
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Mahasiswa {
 
@@ -20,15 +21,35 @@ public class Mahasiswa {
         return nama;
     }
 
-    public void setNama(String namaBaru) {
-        this.nama = namaBaru;
-    }
-
     public String getTelpon() {
         return telpon;
     }
 
-    public void setLastName(String telponBaru) {
-        this.telpon = telponBaru;
+    public boolean update(String nama, String telpon) {
+        Database db = new Database();
+        try {
+            Statement state = db.conn.createStatement();
+            String sql = "update mahasiswa SET nama='%s', telpon='%s' WHERE id=%d";
+            sql = String.format(sql, nama, telpon, id);
+            state.execute(sql);
+            db.conn.close();
+            return true;
+        } catch (SQLException e1) {
+            return false;
+        }
+    }
+
+    public boolean delete() {
+        Database db = new Database();
+        try {
+            Statement state = db.conn.createStatement();
+            String sql = "delete from mahasiswa WHERE id=%d";
+            sql = String.format(sql, id);
+            state.execute(sql);
+            db.conn.close();
+            return true;
+        } catch (SQLException e1) {
+            return false;
+        }
     }
 }
